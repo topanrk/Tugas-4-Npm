@@ -28,7 +28,7 @@ Cypress.Commands.add('login',() => {
     cy.visit('https://www.demoblaze.com/index.html')
     cy.get('#login2').click()
     cy.wait(10000)
-    cy.get('#loginusername').type('dede')
+    cy.get('#loginusername').type('dede',)
     cy.get('#loginpassword').type('dede')
     cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
 })
