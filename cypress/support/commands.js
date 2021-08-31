@@ -32,3 +32,5 @@ Cypress.Commands.add('login',() => {
     cy.get('#loginpassword').type('dede')
     cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
 })
+
+import('cypress-file-upload')
