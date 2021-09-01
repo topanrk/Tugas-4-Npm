@@ -11,8 +11,9 @@ describe('Validate Input', function(){
         cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(1) > .custom-control-label').click()
         cy.get('#uploadPicture').attachFile('covid-19_logo_500px_0.png')
         cy.get('#currentAddress').type('Jalan Bahagia').should('have.value','Jalan Bahagia')
-        cy.get('.css-yk16xz-control > .css-1wy0on6 > .css-tlfecz-indicatorContainer > .css-19bqh2r').click()
-        cy.get('.css-1pahdxg-control > .css-1hwfws3 > .css-1wa3eu0-placeholder').type('NCR{enter}',{multiple:true})
+        cy.get('#stateCity-wrapper > :nth-child(2)').type('NCR{enter}')
+        cy.get('#stateCity-wrapper > :nth-child(3)').type('Delhi{enter}')
+        cy.get('#submit').click()
     })
 
     Cypress.on('uncaught:exception', (err, runnable)=>{
